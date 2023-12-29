@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'fondo-carpediem': "url('./src/assets/img/fondo.jpg')",
+				'fondo-carpediem': "url('/src/assets/img/fondo.jpg')",
 			},
 			fontFamily: {
 				'open-sans': '"Open Sans", sans-serif',
