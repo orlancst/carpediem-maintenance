@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import logoCarpeDiem from '/src/assets/img/logo_white.png';
 ---
 
 <html lang="en">
@@ -11,7 +13,8 @@
 	</head>
 	<body class="bg-fondo-carpediem bg-cover bg-no-repeat bg-center box-content">
 		<section class="h-screen flex flex-col justify-center items-center text-center gap-y-4">
-			<img src="/public/logo_white.png" class="select-none" width="200" alt="Logo de motel Carpediem">
+			<Image src={logoCarpeDiem} alt="Logo de motel Carpediem" class='select-none' width="200"/>
+			<!-- <img src="/public/logo_white.png" class="select-none" width="200" alt="Logo de motel Carpediem"> -->
 			<h1 class="text-white font-bold text-3xl font-gill-sans-bold">¡Estamos en construcción!</h1>
 			<h3 class="text-white font-gill-sans">Mientras, visítanos en nuestras redes sociales:</h3>
 			<div class="flex flex-col sm:flex-row gap-3">
