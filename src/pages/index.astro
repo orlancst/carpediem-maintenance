@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logoCarpeDiem from '/src/assets/img/logo_white.png';
 import markerIcon from '/src/assets/img/marker.png';
+import whatsappIcon from '/src/assets/img/whatsapp2.png';
 ---
 
 <html lang="en">
@@ -14,8 +15,8 @@ import markerIcon from '/src/assets/img/marker.png';
 	</head>
 	<body class="bg-fondo-carpediem bg-cover bg-no-repeat bg-center box-content">
 
-		<section class="h-screen flex flex-col justify-center items-center text-center gap-y-4">
-			<Image src={logoCarpeDiem} alt="Logo de motel Carpediem" class='select-none' width="200"/>
+		<section class="h-fit py-8 sm:py-0 sm:h-screen flex flex-col justify-center items-center text-center gap-y-4 tracking-wide">
+			<Image src={logoCarpeDiem} alt="Logo de motel Carpediem" class='select-none w-[160px] sm:w-[200px]'/>
 			<h1 class="text-white font-bold text-3xl font-gill-sans-bold">¡Estamos en construcción!</h1>
 			<h3 class="text-white font-gill-sans">Mientras, visítanos en nuestras redes sociales:</h3>
 			<div class="flex flex-col sm:flex-row gap-3">
@@ -24,13 +25,49 @@ import markerIcon from '/src/assets/img/marker.png';
 				<a href="https://www.tiktok.com/@motelcarpediem" class="px-4 py-2 rounded-full border border-neutral-100 bg-neutral-100 hover:bg-pink-100 transition ease-in-out text-pink-950 font-gill-sans-medium flex flex-row items-center gap-x-1" target="_blank" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-4 w-5"> <path fill="currentColor" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" /> </svg> <span class="">TikTok</span></a>
 			</div>
 
-			<h2 class="text-white font-gill-sans-bold">Nos encontramos en:</h2>
-			<div class="text-white flex flex-col gap-y-1 px-3">
-				<div class="flex flex-row items-start text-start gap-x-2">
-					<Image src={markerIcon} alt="" class='select-none w-5'/>
-					<span>Cl. 44 #35-44 - Chiquinquirá <a href="https://wa.me/573103662228?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="ml-1"><span class="inline-flex items-center rounded-md bg-gray-50 hover:bg-pink-100 transition ease-in-out text-pink-950 px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10">Contactar</span></a></span>
+			
+			<div class="bg-black/30 w-full mt-3 py-4">
+				<h2 class="text-white text-xl font-gill-sans-bold">Nos encontramos en:</h2>
+				<div class="flex flex-col justify-center sm:flex-row flex-wrap gap-3 sm:gap-5">
+					<div class="grid gap-y-1 justify-items-center p-4">
+						<h5 class="font-gill-sans-bold text-white">Barrio Abajo</h5>
+						<div class="flex flex-row items-start text-start gap-x-2">
+							<Image src={markerIcon} alt="" class='select-none w-5'/>
+							<span class="text-white">Cl. 43 #50B-39</span>
+						</div>
+						<a href="https://wa.me/573003592138?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="w-fit flex flex-row  items-center gap-x-2 py-1 px-3 mt-1 bg-white rounded-lg hover:bg-pink-100 transition ease-in-out">
+							<Image src={whatsappIcon} alt="" class='select-none w-4'/>
+							<span class="text-black text-sm">Contáctanos</span>
+						</a>
+					</div>
 	
+					<div class="grid gap-y-1 justify-items-center p-4">
+						<h5 class="font-gill-sans-bold text-white">Chiquinquirá</h5>
+						<div class="flex flex-row items-start text-start gap-x-2">
+							<Image src={markerIcon} alt="" class='select-none w-5'/>
+							<span class="text-white">Cl. 44 #35-44</span>
+						</div>
+						<a href="https://wa.me/573103662228?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="w-fit flex flex-row  items-center gap-x-2 py-1 px-3 mt-1 bg-white rounded-lg hover:bg-pink-100 transition ease-in-out">
+							<Image src={whatsappIcon} alt="" class='select-none w-4'/>
+							<span class="text-black text-sm">Contáctanos</span>
+						</a>
+					</div>
+	
+					<div class="grid gap-y-1 justify-items-center p-4">
+						<h5 class="font-gill-sans-bold text-white">Circunvalar</h5>
+						<div class="flex flex-row items-start text-start gap-x-2">
+							<Image src={markerIcon} alt="" class='select-none w-5'/>
+							<span class="text-white">Cl. 110 #6-335 PIC</span>
+						</div>
+						<a href="https://wa.me/573102842072?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="w-fit flex flex-row  items-center gap-x-2 py-1 px-3 mt-1 bg-white rounded-lg hover:bg-pink-100 transition ease-in-out">
+							<Image src={whatsappIcon} alt="" class='select-none w-4'/>
+							<span class="text-black text-sm">Contáctanos</span>
+						</a>
+					</div>
 				</div>
+			</div>
+
+			<!-- <div class="text-white flex flex-col gap-y-1 px-3">
 				<div class="flex flex-row items-start text-start gap-x-2">
 					<Image src={markerIcon} alt="" class='select-none w-5'/>
 					<span>Cl. 43 #50B-39 - Barrio Abajo <a href="https://wa.me/573003592138?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="ml-1"><span class="inline-flex items-center rounded-md bg-gray-50 hover:bg-pink-100 transition ease-in-out text-pink-950 px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10">Contactar</span></a></span>
@@ -38,14 +75,18 @@ import markerIcon from '/src/assets/img/marker.png';
 				</div>
 				<div class="flex flex-row items-start text-start gap-x-2">
 					<Image src={markerIcon} alt="" class='select-none w-5'/>
-					<span>Cl. 110 #6-335 Parque Internacional del Caribe - Circunvalar <a href="https://wa.me/573102842072?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="ml-1"><span class="inline-flex items-center rounded-md bg-gray-50 hover:bg-pink-100 transition ease-in-out text-pink-950 px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10">Contactar</span></a></span>
+					<span>Cl. 44 #35-44 - Chiquinquirá <a href="https://wa.me/573103662228?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="ml-1"><span class="inline-flex items-center rounded-md bg-gray-50 hover:bg-pink-100 transition ease-in-out text-pink-950 px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10">Contactar</span></a></span>
 	
 				</div>
-			</div>
+
+				<div class="flex flex-row items-start text-start gap-x-2">
+					<Image src={markerIcon} alt="" class='select-none w-5'/>
+					<span>Cl. 110 #6-335 PIC - Circunvalar <a href="https://wa.me/573102842072?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="ml-1"><span class="inline-flex items-center rounded-md bg-gray-50 hover:bg-pink-100 transition ease-in-out text-pink-950 px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10">Contactar</span></a></span>
+	
+				</div>
+			</div> -->
 
 		</section>
-
-
 
 		<script>
 			function disableImgDragging() {
