@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'fondo-carpediem': "url('./src/assets/img/fondo.jpg')",
+				'fondo-carpediem': "url('/src/assets/img/fondo.jpg')",
 			},
 			fontFamily: {
 				'open-sans': '"Open Sans", sans-serif',
@@ -13,7 +13,9 @@ export default {
 				'gill-sans-bold': '"Gill Sans Bold", sans-serif',
 				
 			},
-			
+			listStyleType: {
+				"marker-icon": 'url("/src/assets/img/marker.png")',
+			},
 		},
 	},
 	plugins: [],
