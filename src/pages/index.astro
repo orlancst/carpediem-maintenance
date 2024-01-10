@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import logoCarpeDiem from '/src/assets/img/logo_white.png';
-import markerIcon from '/src/assets/img/marker.png';
 import whatsappIcon from '/src/assets/img/whatsapp2.png';
 import callIcon from '/src/assets/img/call.png';
 import closeIcon from '/src/assets/img/cerrar.png';
@@ -15,9 +14,9 @@ import closeIcon from '/src/assets/img/cerrar.png';
 		<meta name="generator" content={Astro.generator} />
 		<title>Motel Carpediem - En construcción</title>
 	</head>
-	<body class="bg-fondo-carpediem bg-cover bg-no-repeat bg-center box-content">
+	<body class=" box-content">
 
-		<section class="relative h-fit py-8 sm:py-0 sm:h-screen flex flex-col justify-center items-center text-center gap-y-4 tracking-wide">
+		<section class="bg-fondo-carpediem bg-cover bg-no-repeat bg-center relative py-8 sm:py-0 h-screen  flex flex-col justify-center items-center text-center gap-y-4 tracking-wide">
 			<Image src={logoCarpeDiem} alt="Logo de motel Carpediem" class='select-none w-[160px] sm:w-[200px]'/>
 			<h1 class="text-white font-bold text-3xl font-gill-sans-bold">¡Estamos en construcción!</h1>
 			<h3 class="text-white font-gill-sans">Mientras, visítanos en nuestras redes sociales:</h3>
@@ -28,46 +27,7 @@ import closeIcon from '/src/assets/img/cerrar.png';
 			</div>
 
 			
-			<div class="bg-black/30 w-full mt-3 py-4">
-				<h2 class="text-white text-xl font-gill-sans-bold">Nos encontramos en:</h2>
-				<div class="flex flex-col justify-center sm:flex-row flex-wrap gap-3 sm:gap-5">
-					<div class="grid gap-y-1 justify-items-center p-4">
-						<h5 class="font-gill-sans-bold text-white">Barrio Abajo</h5>
-						<div class="flex flex-row items-start text-start gap-x-2">
-							<Image src={markerIcon} alt="" class='select-none w-5'/>
-							<span class="text-white">Cl. 43 #50B-39</span>
-						</div>
-						<!-- <a href="https://wa.me/573003592138?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="w-fit flex flex-row  items-center gap-x-2 py-1 px-3 mt-1 bg-white rounded-lg hover:bg-pink-100 transition ease-in-out">
-							<Image src={whatsappIcon} alt="" class='select-none w-4'/>
-							<span class="text-black text-sm">Contáctanos</span>
-						</a> -->
-					</div>
-	
-					<div class="grid gap-y-1 justify-items-center p-4">
-						<h5 class="font-gill-sans-bold text-white">Chiquinquirá</h5>
-						<div class="flex flex-row items-start text-start gap-x-2">
-							<Image src={markerIcon} alt="" class='select-none w-5'/>
-							<span class="text-white">Cl. 44 #35-44</span>
-						</div>
-						<!-- <a href="https://wa.me/573103662228?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="w-fit flex flex-row  items-center gap-x-2 py-1 px-3 mt-1 bg-white rounded-lg hover:bg-pink-100 transition ease-in-out">
-							<Image src={whatsappIcon} alt="" class='select-none w-4'/>
-							<span class="text-black text-sm">Contáctanos</span>
-						</a> -->
-					</div>
-	
-					<div class="grid gap-y-1 justify-items-center p-4">
-						<h5 class="font-gill-sans-bold text-white">Circunvalar</h5>
-						<div class="flex flex-row items-start text-start gap-x-2">
-							<Image src={markerIcon} alt="" class='select-none w-5'/>
-							<span class="text-white">Cl. 110 #6-335 PIC</span>
-						</div>
-						<!-- <a href="https://wa.me/573102842072?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" class="w-fit flex flex-row  items-center gap-x-2 py-1 px-3 mt-1 bg-white rounded-lg hover:bg-pink-100 transition ease-in-out">
-							<Image src={whatsappIcon} alt="" class='select-none w-4'/>
-							<span class="text-black text-sm">Contáctanos</span>
-						</a> -->
-					</div>
-				</div>
-			</div>
+
 
 			<button id="btnModal" class="fixed bottom-5 right-5 p-3 bg-white rounded-full" title="Contactar por WhatsApp">
 				<Image src={whatsappIcon} alt="" id='imgModal' class='select-none w-8'/>
@@ -79,7 +39,37 @@ import closeIcon from '/src/assets/img/cerrar.png';
 
 		</section>
 
-		<div id="modal-dialog" class="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen justify-center items-center opacity-0 hidden transition-opacity duration-500">
+		<!-- <div class="bg-black w-full py-4 h-fit sm:h-[23vh] grid place-items-center">
+			<h2 class="text-white text-xl text-center font-gill-sans-bold pb-5 sm:pb-0">Nos encontramos en:</h2>
+			<div class="flex flex-col justify-center sm:flex-row flex-wrap gap-y-1 gap-x-4">
+				<div class="grid gap-y-1 justify-items-center pb-4">
+					<h5 class="font-gill-sans-bold text-white">Barrio Abajo</h5>
+					<div class="flex flex-row items-start text-start gap-x-2">
+						<Image src={markerIcon} alt="" class='select-none w-5'/>
+						<span class="text-white">Cl. 43 #50B-39</span>
+					</div>
+				</div>
+				
+				<div class="grid gap-y-1 justify-items-center pb-4">
+					<h5 class="font-gill-sans-bold text-white">Circunvalar</h5>
+					<div class="flex flex-row items-start text-start gap-x-2">
+						<Image src={markerIcon} alt="" class='select-none w-5'/>
+						<span class="text-white">Cl. 110 #6-335 PIC</span>
+					</div>
+				</div>
+
+				<div class="grid gap-y-1 justify-items-center pb-4">
+					<h5 class="font-gill-sans-bold text-white">Chiquinquirá</h5>
+					<div class="flex flex-row items-start text-start gap-x-2">
+						<Image src={markerIcon} alt="" class='select-none w-5'/>
+						<span class="text-white">Cl. 44 #35-44</span>
+					</div>
+				</div>
+
+			</div>
+		</div> -->
+
+		<div id="modal-dialog" class="fixed left-0 top-0 bg-black bg-opacity-50 backdrop-blur-sm w-screen h-screen justify-center items-center opacity-0 hidden transition-opacity duration-500">
 			<div class="flex flex-row items-center gap-x-2 fixed bottom-[90px] right-6">
 				<span class="text-white font-gill-sans-medium tracking-wide text-xl">Circunvalar</span>
 				<a href="https://wa.me/573102842072?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" id="btnModal2" class=" bg-white p-3 rounded-full">
