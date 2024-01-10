@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import logoCarpeDiem from '/src/assets/img/logo_white.png';
 import markerIcon from '/src/assets/img/marker.png';
 import whatsappIcon from '/src/assets/img/whatsapp2.png';
+import callIcon from '/src/assets/img/call.png';
+import closeIcon from '/src/assets/img/cerrar.png';
 ---
 
 <html lang="en">
@@ -67,8 +69,12 @@ import whatsappIcon from '/src/assets/img/whatsapp2.png';
 				</div>
 			</div>
 
-			<button id="btnModal" class="fixed bottom-5 right-5 p-3 bg-white rounded-full z-40" title="Contactar por WhatsApp">
-				<Image src={whatsappIcon} alt="" class='select-none w-8'/>
+			<button id="btnModal" class="fixed bottom-5 right-5 p-3 bg-white rounded-full" title="Contactar por WhatsApp">
+				<Image src={whatsappIcon} alt="" id='imgModal' class='select-none w-8'/>
+			</button>
+
+			<button id="btnCloseModal" class="fixed bottom-5 right-5 p-3 bg-white rounded-full z-40 hidden" title="Cerrar">
+				<Image src={closeIcon} alt="" id='imgModal' class='select-none w-8 scale-50'/>
 			</button>
 
 		</section>
@@ -77,19 +83,19 @@ import whatsappIcon from '/src/assets/img/whatsapp2.png';
 			<div class="flex flex-row items-center gap-x-2 fixed bottom-[90px] right-6">
 				<span class="text-white font-gill-sans-medium tracking-wide text-xl">Circunvalar</span>
 				<a href="https://wa.me/573102842072?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" id="btnModal2" class=" bg-white p-3 rounded-full">
-					<Image src={whatsappIcon} alt="" class='select-none w-8'/>
+					<Image src={callIcon} alt="" class='select-none w-8'/>
 				</a>
 			</div>
 			<div class="flex flex-row items-center gap-x-2 fixed bottom-[160px] right-6">
 				<span class="text-white font-gill-sans-medium tracking-wide text-xl">Chiquinquirá</span>
 				<a href="https://wa.me/573103662228?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" id="btnModal2" class=" bg-white p-3 rounded-full">
-					<Image src={whatsappIcon} alt="" class='select-none w-8'/>
+					<Image src={callIcon} alt="" class='select-none w-8'/>
 				</a>
 			</div>
 			<div class="flex flex-row items-center gap-x-2 fixed bottom-[230px] right-6">
 				<span class="text-white font-gill-sans-medium tracking-wide text-xl">Barrio Abajo</span>
 				<a href="https://wa.me/573003592138?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20disponibilidad%20y%20precios." target="_blank" id="btnModal2" class=" bg-white p-3 rounded-full">
-					<Image src={whatsappIcon} alt="" class='select-none w-8'/>
+					<Image src={callIcon} alt="" class='select-none w-8'/>
 				</a>
 			</div>
 		</div>
@@ -97,9 +103,12 @@ import whatsappIcon from '/src/assets/img/whatsapp2.png';
 		<script>
 
 			const btnOpenModal = document.querySelector("#btnModal");
+			const btnCloseModal = document.querySelector("#btnCloseModal");
 
 			btnOpenModal.addEventListener("click", () => {
 				let dialog = document.querySelector("#modal-dialog");
+
+				btnCloseModal.classList.toggle("hidden");
 
 				dialog.classList.toggle("hidden");
 				dialog.classList.toggle("flex");
@@ -109,6 +118,19 @@ import whatsappIcon from '/src/assets/img/whatsapp2.png';
 				}, 20);
 
 			});
+
+			btnCloseModal.addEventListener("click", () => {
+				let dialog = document.querySelector("#modal-dialog");
+
+				btnCloseModal.classList.toggle("hidden");
+
+				dialog.classList.toggle("hidden");
+				dialog.classList.toggle("flex");
+
+				setTimeout(() => {
+					dialog.classList.toggle("opacity-100");
+				}, 20);
+			})
 
 			function disableImgDragging() {
 				var images = document.getElementsByTagName("img");
